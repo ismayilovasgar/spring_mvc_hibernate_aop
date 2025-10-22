@@ -35,5 +35,7 @@
 </table>
 
 <br>
+
+<input type="button" value="add" onclick="window.location.href='addEmployee' "/>
 </body>
 </html>
