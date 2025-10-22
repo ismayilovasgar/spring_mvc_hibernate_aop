@@ -49,4 +49,8 @@
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
+    <!-- Statik kaynaklar (css, js, images) -->
+    <mvc:resources mapping="/resources/**" location="classpath:/static/" />
+
+
 </beans>
