@@ -9,20 +9,27 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeDAO employeeDAO;
 
     @Override
-    @Transactional
+//    @Transactional
     public List<Employee> getAllEmployees() {
         return employeeDAO.getAllEmployees();
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void saveEmployee(Employee employee) {
         employeeDAO.saveEmployee(employee);
+    }
+
+    @Override
+//    @Transactional
+    public Employee getEmployee(int id) {
+        return employeeDAO.findById(id);
     }
 }

@@ -19,6 +19,7 @@
 
 <h2>Add Employe Page</h2>
 <form:form modelAttribute="employee" action="saveEmployee">
+    <form:hidden path="id"/>
     Name: <form:input path="name"/>
     <br><br>
     Surname: <form:input path="surname"/>
