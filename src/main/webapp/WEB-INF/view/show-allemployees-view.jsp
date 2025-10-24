@@ -21,12 +21,15 @@
         <th>Surname</th>
         <th>Department</th>
         <th>Salary</th>
-        <th>Operations</th>
+        <th colspan="2">Operations</th>
     </tr>
 
     <c:forEach var="employee" items="${allEmployees}">
         <c:url var="updateButton" value="updateInfo">
             <c:param name="id" value="${employee.id}"/>
+        </c:url>
+        <c:url var="deleteButton" value="deleteEmployee">
+            <c:param name="empId" value="${employee.id}"/>
         </c:url>
         <tr>
             <td>${employee.name}</td>
@@ -36,6 +39,10 @@
             <td>
                 <input value="update" type="button"
                        onclick="window.location.href='${updateButton}'"/>
+            </td>
+            <td>
+                <input value="delete" type="button"
+                       onclick="window.location.href='${deleteButton}'"/>
             </td>
         </tr>
     </c:forEach>
